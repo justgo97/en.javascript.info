@@ -1,4 +1,8 @@
 function camelize(str) {
+  while( str[0] == '-' ) {
+    str = str.slice(1);
+  }
+  
   return str
     .split('-') // splits 'my-long-word' into array ['my', 'long', 'word']
     .map(
